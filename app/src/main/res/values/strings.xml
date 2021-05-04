@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Android_JetPack_Practice</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
 </resources>
