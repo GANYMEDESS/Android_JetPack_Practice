@@ -1,6 +1,5 @@
 package com.jsb.android_jetpack_practice
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -20,6 +19,7 @@ class NumberViewModel: ViewModel()
 
     // 내부 설정 자료형은 Mutable -> 변경가능하도록 설정
     private val _currentValue = MutableLiveData<Int>()
+    var newValue: String? = null
 
     val currentValue: LiveData<Int>
         get() = _currentValue
@@ -31,12 +31,15 @@ class NumberViewModel: ViewModel()
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
-    fun updateValue(actionType: ActionType, input: Int) {
+    // Functions
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    fun updateValue(actionType: ActionType, input: String) {
+        val newNum = input.toInt()
         when(actionType){
             ActionType.PLUS ->
-                _currentValue.value = _currentValue.value?.plus(input)
+                _currentValue.value = _currentValue.value?.plus(newNum)
             ActionType.MINUS ->
-                _currentValue.value = _currentValue.value?.minus(input)
+                _currentValue.value = _currentValue.value?.minus(newNum)
         }
     }
 }

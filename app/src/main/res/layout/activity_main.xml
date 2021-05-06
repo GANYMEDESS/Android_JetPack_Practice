@@ -4,6 +4,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="actionType"
+            type="com.jsb.android_jetpack_practice.ActionType" />
+        <variable
+            name="viewModel"
+            type="com.jsb.android_jetpack_practice.NumberViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -13,7 +22,7 @@
             android:id="@+id/number_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
+            android:text="@{viewModel.currentValue.toString()}"
             android:textSize="50sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -30,6 +39,7 @@
             android:ems="10"
             android:hint="Input Number"
             android:inputType="number"
+            android:text="@={viewModel.newValue}"
             app:layout_constraintEnd_toStartOf="@+id/plus_btn"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -41,6 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/plus"
+            android:onClick="@{() -> viewModel.updateValue(actionType.PLUS, viewModel.newValue)}"
             app:layout_constraintBottom_toBottomOf="@+id/input_edit"
             app:layout_constraintEnd_toStartOf="@+id/minus_btn"
             app:layout_constraintHorizontal_bias="0.5"
@@ -53,6 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/minus"
+            android:onClick="@{() -> viewModel.updateValue(actionType.MINUS, viewModel.newValue)}"
             app:layout_constraintBottom_toBottomOf="@+id/input_edit"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
