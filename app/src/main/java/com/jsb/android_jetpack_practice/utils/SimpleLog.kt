@@ -5,40 +5,39 @@ import com.jsb.android_jetpack_practice.application.JetApplication
 
 object SimpleLog
 {
-    val TAG = "SimpleLog"
     /**
      * Log Level Error
      */
     fun e(message: String) {
-        if (JetApplication.debug) Log.e(TAG, buildLogMsg(message))
+        if (JetApplication.debug) Log.e(Constants.TAG, buildLogMsg(message))
     }
 
     /**
      * Log Level Warning
      */
     fun w(message: String) {
-        if (JetApplication.debug) Log.w(TAG, buildLogMsg(message))
+        if (JetApplication.debug) Log.w(Constants.TAG, buildLogMsg(message))
     }
 
     /**
      * Log Level Information
      */
     fun i(message: String) {
-        if (JetApplication.debug) Log.i(TAG, buildLogMsg(message))
+        if (JetApplication.debug) Log.i(Constants.TAG, buildLogMsg(message))
     }
 
     /**
      * Log Level Debug
      */
     fun d(message: String) {
-        if (JetApplication.debug) Log.d(TAG, buildLogMsg(message))
+        if (JetApplication.debug) Log.d(Constants.TAG, buildLogMsg(message))
     }
 
     /**
      * Log Level Verbose
      */
     fun v(message: String) {
-        if (JetApplication.debug) Log.v(TAG, buildLogMsg(message))
+        if (JetApplication.debug) Log.v(Constants.TAG, buildLogMsg(message))
     }
 
 
