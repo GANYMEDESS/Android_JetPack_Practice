@@ -4,5 +4,8 @@
     <string name="title_favorite_photo">FAVORITE</string>
     <string name="title_setting">SETTING</string>
 
+    <string name="beer_tag">Tag</string>
+    <string name="beer_alcohol">Alcohol</string>
     <string name="image_contentDescription">image</string>
+    <string name="please_wait">Please Wait&#8230;</string>
 </resources>

@@ -8,5 +8,5 @@ import retrofit2.http.GET
 interface BeerApi
 {
     @GET(Constants.API_ENDPOINT)
-    fun getRandomBeer(): Single<RandomBeer>
+    fun getRandomBeer(): Single<RandomBeer.Beers>
 }

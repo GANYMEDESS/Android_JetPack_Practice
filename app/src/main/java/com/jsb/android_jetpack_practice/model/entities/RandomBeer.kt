@@ -2,32 +2,30 @@ package com.jsb.android_jetpack_practice.model.entities
 
 object RandomBeer
 {
-    data class Beers(
-        val beer: List<BeersItem>
-    )
+    class Beers: ArrayList<BeersItem>()
 
     data class BeersItem(
-        val abv: Double,
-        val attenuation_level: Double,
-        val boil_volume: BoilVolume,
-        val brewers_tips: String,
-        val contributed_by: String,
-        val description: String,
-        val ebc: Int,
-        val first_brewed: String,
-        val food_pairing: List<String>,
-        val ibu: Int,
         val id: Int,
-        val image_url: String,
-        val ingredients: Ingredients,
-        val method: Method,
         val name: String,
-        val ph: Double,
-        val srm: Double,
         val tagline: String,
+        val first_brewed: String,
+        val description: String,
+        val image_url: String,
+        val abv: Double,
+        val ibu: Int,
         val target_fg: Int,
         val target_og: Double,
-        val volume: Volume
+        val ebc: Int,
+        val srm: Double,
+        val ph: Double,
+        val attenuation_level: Double,
+        val volume: Volume,
+        val boil_volume: BoilVolume,
+        val method: Method,
+        val ingredients: Ingredients,
+        val food_pairing: List<String>,
+        val brewers_tips: String,
+        val contributed_by: String
     )
 
     data class BoilVolume(
@@ -85,7 +83,7 @@ object RandomBeer
 
     data class Amount(
         val unit: String,
-        val value: Int
+        val value: Double
     )
 
     data class AmountX(

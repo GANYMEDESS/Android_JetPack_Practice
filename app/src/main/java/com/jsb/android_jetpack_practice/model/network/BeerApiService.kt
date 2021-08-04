@@ -16,7 +16,7 @@ class BeerApiService
         .build()
         .create(BeerApi::class.java)
 
-    fun getRandomBeer(): Single<RandomBeer> {
+    fun getRandomBeer(): Single<RandomBeer.Beers> {
         return api.getRandomBeer()
     }
 }
