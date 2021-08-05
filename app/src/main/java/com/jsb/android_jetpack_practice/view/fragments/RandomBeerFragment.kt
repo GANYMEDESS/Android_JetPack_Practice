@@ -103,7 +103,6 @@ class RandomBeerFragment: Fragment()
             // Image
             Glide.with(requireActivity())
                 .load(beer.image_url)
-                .override(300,300)
                 .into(ivBeerImage)
 
             // Text
