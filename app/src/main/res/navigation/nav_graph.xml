@@ -10,4 +10,10 @@
         android:name="com.jsb.android_jetpack_practice.view.fragments.RandomBeerFragment"
         android:label="fragment_random_beer"
         tools:layout="@layout/fragment_random_beer" />
+
+    <fragment
+        android:id="@+id/beerListFragment"
+        android:name="com.jsb.android_jetpack_practice.view.fragments.BeerListFragment"
+        android:label="fragment_beer_list"
+        tools:layout="@layout/fragment_beer_list" />
 </navigation>

@@ -28,7 +28,7 @@ class RandomBeerViewModel: ViewModel()
                 .subscribeWith(object : DisposableSingleObserver<RandomBeer.Beers>(){
                     override fun onSuccess(value: RandomBeer.Beers?) {
                         loadRandomBeer.value = false
-                        randomBeerResponse.value = value
+                        randomBeerResponse.value = value!!
                         randomBeerLoadingError.value = false
                     }
 

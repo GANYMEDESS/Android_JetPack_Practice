@@ -1,5 +1,6 @@
 package com.jsb.android_jetpack_practice.model.network
 
+import com.jsb.android_jetpack_practice.model.entities.beers.Beers
 import com.jsb.android_jetpack_practice.model.entities.RandomBeer
 import com.jsb.android_jetpack_practice.utils.Constants
 import io.reactivex.rxjava3.core.Single
@@ -16,7 +17,11 @@ class BeerApiService
         .build()
         .create(BeerApi::class.java)
 
-    fun getRandomBeer(): Single<RandomBeer.Beers> {
+    fun getRandomBeer(): Single<RandomBeer.Beers>{
         return api.getRandomBeer()
+    }
+
+    fun getBeerList(): Single<Beers>{
+        return api.getBeerList()
     }
 }
